@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexey Vavilin — Senior Rust &amp; Systems Engineer</title>
+<meta name="description" content="Senior Rust and systems engineer. Fast, data-heavy backends, low-level optimization, 15 years in software.">
+<meta property="og:title" content="Alexey Vavilin — Senior Rust &amp; Systems Engineer">
+<meta property="og:description" content="Fast, data-heavy backends and low-level optimization. 15 years in software, 7+ in Rust.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="photo.jpg">
+<meta name="theme-color" content="#2b4c7e">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5c6370;
+    --accent: #2b4c7e;
+    --accent-ink: #ffffff;
+    --line: #e3e6ea;
+    --chip: #eef2f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1218;
+      --card: #171b23;
+      --text: #eceef2;
+      --muted: #9aa3b2;
+      --accent: #6f9be0;
+      --accent-ink: #0f1218;
+      --line: #262c38;
+      --chip: #1f2531;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .card {
+    width: 100%;
+    max-width: 640px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 36px 32px 28px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }
+  header { display: flex; gap: 20px; align-items: center; }
+  .photo {
+    width: 96px; height: 96px; flex: none;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--card);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  h1 { margin: 0; font-size: 1.7rem; line-height: 1.2; letter-spacing: -0.01em; }
+  .role { margin: 4px 0 0; color: var(--accent); font-weight: 600; }
+  .place { margin: 2px 0 0; color: var(--muted); font-size: 0.92rem; }
+  .about { margin-top: 26px; }
+  .about p { margin: 0 0 14px; }
+  .about p:last-child { margin-bottom: 0; }
+  h2 {
+    margin: 26px 0 10px;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+  .chips li {
+    background: var(--chip);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 0.88rem;
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .btn {
+    display: inline-flex; align-items: center;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: border-color .15s, transform .15s;
+  }
+  .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  footer { margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  @media (max-width: 480px) {
+    .card { padding: 26px 20px 22px; }
+    header { flex-direction: column; text-align: center; }
+    .links { justify-content: center; }
+    .btn { flex: 1 1 40%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <img class="photo" src="photo.jpg" alt="Alexey Vavilin" width="96" height="96">
+      <div>
+        <h1>Alexey Vavilin</h1>
+        <p class="role">Senior Rust &amp; Systems Engineer</p>
+        <p class="place">Batumi, Georgia · Remote</p>
+      </div>
+    </header>
+
+    <section class="about">
+      <p>I build fast, data-heavy backends. 15 years in software, 7+ of them in Rust, mostly in blockchain infrastructure and, earlier, system-level software.</p>
+      <p>I'm at my best when a working system hits its limits: a bottleneck, a scaling wall, a slow component. I dive in, measure everything, and tune it until it performs.</p>
+      <p>I love learning new skills and domains, and I use AI tools like Claude Code, Cursor, and Codex every day. I set the task and the design, review the result, and spend my time on decisions and verification.</p>
+    </section>
+
+    <h2>Stack</h2>
+    <ul class="chips">
+      <li>Rust</li><li>Go</li><li>Python</li><li>C/C++</li>
+      <li>PostgreSQL</li><li>RocksDB</li><li>Kafka</li>
+      <li>Docker</li><li>Kubernetes</li><li>WASM</li>
+    </ul>
+
+    <h2>Open to</h2>
+    <p style="margin:0">Senior backend roles on performance-critical, data-intensive products. Rust is where I feel most at home, but I'd happily work in Go or Python too.</p>
+
+    <nav class="links" aria-label="Links">
+      <a class="btn primary" href="mailto:alexey.vavilin88@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/alexey-vavilin-b603a21ba" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/mnogoborec" rel="noopener">GitHub</a>
+      <a class="btn" href="https://t.me/mnogoborec" rel="noopener">Telegram</a>
+      <a class="btn" href="Alexey_Vavilin_CV.pdf" download>Download CV</a>
+    </nav>
+
+    <footer>alexey.vavilin88@gmail.com</footer>
+  </main>
+</body>
+</html>
