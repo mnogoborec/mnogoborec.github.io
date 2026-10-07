@@ -83,6 +83,13 @@
     padding: 4px 12px;
     font-size: 0.88rem;
   }
+  .focus { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .focus li {
+    padding: 2px 0 2px 14px;
+    border-left: 3px solid var(--accent);
+  }
+  .focus strong { display: block; font-size: 0.98rem; }
+  .focus span { display: block; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
   .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
   .btn {
     display: inline-flex; align-items: center;
@@ -114,15 +121,23 @@
       <div>
         <h1>Alexey Vavilin</h1>
         <p class="role">Senior Rust &amp; Systems Engineer</p>
-        <p class="place">Batumi, Georgia · Remote</p>
+        <p class="place">Batumi, Georgia · Open to relocation</p>
       </div>
     </header>
 
     <section class="about">
-      <p>I build fast, data-heavy backends. 15 years in software, 7+ of them in Rust, mostly in blockchain infrastructure and, earlier, system-level software.</p>
-      <p>I'm at my best when a working system hits its limits: a bottleneck, a scaling wall, a slow component. I dive in, measure everything, and tune it until it performs.</p>
-      <p>I love learning new skills and domains, and I use AI tools like Claude Code, Cursor, and Codex every day. I set the task and the design, review the result, and spend my time on decisions and verification.</p>
+      <p>I build fast, data-heavy backends. 15 years in software, 7+ of them in Rust. I'm at my best when a working system hits its limits: I dive in, measure everything, and tune it until it performs.</p>
     </section>
+
+    <h2>Profiles &amp; focus</h2>
+    <ul class="focus">
+      <li><strong>Performance engineering</strong><span>Profiling and deep optimization: throughput, latency, memory, disk I/O.</span></li>
+      <li><strong>Systems programming</strong><span>Rust, C/C++, low-level code, from OS drivers to high-load services.</span></li>
+      <li><strong>Data-intensive backends</strong><span>Pipelines, indexers, storage, and task orchestration on PostgreSQL, Kafka, RocksDB.</span></li>
+      <li><strong>Blockchain infrastructure</strong><span>Node components, SDKs, and data processing for TON and Filecoin.</span></li>
+      <li><strong>AI-assisted development</strong><span>I use Claude Code, Cursor, and Codex every day: I set the task and the design, review the result, and spend my time on decisions and verification.</span></li>
+      <li><strong>Learning new things</strong><span>I love picking up new technologies and domains, and AI makes that faster and more fun.</span></li>
+    </ul>
 
     <h2>Stack</h2>
     <ul class="chips">
