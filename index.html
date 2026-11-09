@@ -90,6 +90,26 @@
   }
   .focus strong { display: block; font-size: 0.98rem; }
   .focus span { display: block; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
+  details.proj-wrap > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+    border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-weight: 600; font-size: 0.95rem; transition: border-color .15s; }
+  details.proj-wrap > summary::-webkit-details-marker { display: none; }
+  details.proj-wrap > summary:hover { border-color: var(--accent); }
+  details.proj-wrap > summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  details.proj-wrap > summary .count { color: var(--muted); font-weight: 500; margin-left: 8px; }
+  details.proj-wrap > summary .chev { width: 10px; height: 10px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .2s; margin-right: 4px; }
+  details.proj-wrap[open] > summary .chev { transform: rotate(-135deg); margin-top: 4px; }
+  details.proj-wrap .show, details.proj-wrap[open] .hide { display: inline; }
+  details.proj-wrap .hide, details.proj-wrap[open] .show { display: none; }
+  details.proj-wrap .projects { margin-top: 12px; }
+  .projects { display: grid; gap: 12px; }
+  .proj { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .proj h3 { margin: 0; font-size: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .tag { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+  .tag.open { background: var(--accent); color: var(--accent-ink); }
+  .proj p { margin: 6px 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
+  .proj .meta { margin-top: 6px; font-size: 0.85rem; color: var(--muted); }
+  .proj a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .proj a:hover { text-decoration: underline; }
   .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
   .btn {
     display: inline-flex; align-items: center;
@@ -138,6 +158,38 @@
       <li><strong>AI-assisted development</strong><span>I use Claude Code, Cursor, and Codex every day: I set the task and the design, review the result, and spend my time on decisions and verification.</span></li>
       <li><strong>Learning new things</strong><span>I love picking up new technologies and domains, and AI makes that faster and more fun.</span></li>
     </ul>
+
+    <h2>Projects</h2>
+    <details class="proj-wrap">
+    <summary><span><span class="show">Show projects</span><span class="hide">Hide projects</span><span class="count">5</span></span><span class="chev" aria-hidden="true"></span></summary>
+    <div class="projects">
+      <article class="proj">
+        <h3>TON node in Rust <span class="tag open">Open source</span></h3>
+        <p>A Rust implementation of a TON blockchain node. I built new features and optimized existing parts (memory, disk I/O, throughput), including an archive node mode that stores the full block history (20 TB) and historical state (8 TB).</p>
+        <div class="meta">RSquad · <a href="https://github.com/RSquad/ton-rust-node" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="proj">
+        <h3>EVER SDK <span class="tag open">Open source</span></h3>
+        <p>A client SDK for TON/Everscale: node interaction, transactions, local VM emulation, ABI, encryption and hashing. Runs on Linux, macOS, Windows and WASM, with bindings in 11 languages.</p>
+        <div class="meta">EverX · <a href="https://github.com/everx-labs/ever-sdk" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="proj">
+        <h3>ever-abi <span class="tag open">Open source</span></h3>
+        <p>A Rust implementation of the Application Binary Interface (ABI) for TVM-compatible blockchains: Everscale, Venom, TON, Gosh and others.</p>
+        <div class="meta">EverX · <a href="https://github.com/everx-labs/ever-abi" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="proj">
+        <h3>Blockchain indexer <span class="tag">Closed source</span></h3>
+        <p>A Kafka-based service that splits live blockchain data into blocks, messages and transactions for explorers, wallets and exchanges. It uses sharding and handled up to 100,000 TPS in tests.</p>
+        <div class="meta">EverX</div>
+      </article>
+      <article class="proj">
+        <h3>Filecoin data onboarding pipeline <span class="tag">Closed source</span></h3>
+        <p>A pipeline that packs petabytes of files into 32 GB files and applies cryptographic transforms. Direct IO and reworked parallelization raised throughput from 3 to 20 GB/s. A task dispatcher coordinated up to 50,000 concurrent tasks.</p>
+        <div class="meta">web3mine</div>
+      </article>
+    </div>
+    </details>
 
     <h2>Stack</h2>
     <ul class="chips">
